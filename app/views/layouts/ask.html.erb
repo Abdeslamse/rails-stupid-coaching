@@ -1,0 +1,7 @@
+<!-- app/views/questions/ask.html.erb -->
+<h1>Ask the Coach</h1>
+<%= form_tag("/ask", method: :get, data: { turbo: false }) do %>
+  <%= label_tag(:question, "Type your question:") %>
+  <%= text_field_tag(:question) %>
+  <%= submit_tag("Ask!") %>
+<% end %>
